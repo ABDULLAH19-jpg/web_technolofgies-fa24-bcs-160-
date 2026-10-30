@@ -1,0 +1,82 @@
+# Web Development Midterm
+
+## Student Information
+
+- **Name:** Abdullah Khetran
+- **Registration Number:** FA24-BCS-160
+
+## Roll Number Calculations
+
+| Parameter | Calculation | Result |
+|---|---|---:|
+| N | Last two digits of registration number | 60 |
+| BP | 600 + N | 660px |
+| H | (N × 7) mod 360 | 60° |
+| K | (N mod 3) + 3 | 3 |
+| Accent Color | hsl(H, 70%, 45%) | hsl(60, 70%, 45%) |
+| Premium Threshold | N × 100 | Rs. 6,000 |
+| Sticky Top Offset | (N mod 40) + 70 | 70px |
+
+## Project Overview
+
+This project extends the original Assignment 2 e-commerce website with responsive layouts, CSS-based category filtering, JavaScript product search and sorting, and premium product labels.
+
+The original Bootstrap-based design and existing visual structure were retained.
+
+## Tasks Implemented
+
+### Task 1 — CSS Category Filtering
+
+- Added four radio filters: All, Unstitched, Ready to Wear, and Accessories.
+- Used CSS selectors to display only products belonging to the selected category.
+- Applied the calculated accent color to the selected filter.
+- Implemented filtering using HTML and CSS without JavaScript.
+
+### Task 2 — Responsive Product Detail Layout
+
+- Implemented a CSS Grid layout using named grid areas.
+- Below 660px, the image, product details, and description appear vertically.
+- At 660px and above, the image and product details appear side by side, with the description below them.
+- Made the product details sticky with a 70px top offset on desktop layouts.
+
+### Task 3 — JavaScript Product Features
+
+- Added case-insensitive product-name search.
+- Combined search with the selected category filter.
+- Displayed a "No products found" message when no products match.
+- Added ascending and descending price sorting.
+- Used existing DOM elements and `appendChild()` to reorder product cards.
+- Added a Premium label to products priced above Rs. 6,000.
+
+## Files Changed
+
+- `index.html` — category filters, search field, sorting control, and no-results message.
+- `product.html` — responsive product detail structure.
+- `style.css` — category filtering, responsive grid, controls, and premium label styles.
+- `script.js` — search, filtering, sorting, and premium-label functionality.
+- `README.md` — project documentation.
+- `FA24-BCS-160-midterm.pdf` — screenshots and implementation code.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5 (existing project framework)
+
+## AI Tools Used
+
+- **ChatGPT:** Used for implementation guidance, code assistance, debugging support, and explanations of HTML, CSS, and JavaScript concepts.
+
+All implementation and browser testing should be reviewed by the student before submission.
+
+## Responsive Testing Checklist
+
+- [ ] 375px — mobile layout
+- [ ] 660px — breakpoint layout
+- [ ] 1280px — desktop layout
+- [ ] Product search and case-insensitive matching
+- [ ] Combined category and search filtering
+- [ ] No-results message
+- [ ] Ascending and descending price sorting
+- [ ] Premium labels
