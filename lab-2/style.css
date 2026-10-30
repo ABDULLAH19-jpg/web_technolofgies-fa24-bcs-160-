@@ -1,0 +1,204 @@
+/* BASE RESET & TYPOGRAPHY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #faf9f6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* RESPONSIVE NAVBAR DRILL */
+.lab-navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.lab-logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+/* Navigation Links Center */
+.lab-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.lab-nav-links a {
+    color: #444;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+.lab-nav-links a:hover {
+    color: #e2570d;
+}
+
+/* Right Side Actions */
+.lab-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lab-cart-icon {
+    font-size: 18px;
+    color: #111;
+    transition: color 0.2s;
+}
+
+.lab-cart-icon:hover {
+    color: #e2570d;
+}
+
+/* Hamburger Toggle Button (Hidden on Desktop) */
+.lab-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #111;
+    cursor: pointer;
+}
+
+
+/* PRODUCT GRID SECTION */
+.lab-main-content {
+    padding: 40px 5% 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.lab-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lab-section-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.lab-section-header p {
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+/* Product Card Styling */
+.lab-product-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lab-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.lab-img-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #f1efed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.lab-product-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.lab-product-body h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.lab-product-body p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+.lab-add-btn {
+    display: block;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.lab-add-btn:hover {
+    background-color: #e2570d;
+    color: #fff;
+}
+
+
+/* RESPONSIVE BREAKPOINT (< 768px): Tablet / Phone adjustments */
+@media (max-width: 768px) {
+    .lab-navbar-wrapper {
+        padding: 14px 20px;
+    }
+
+    /* Collapse navbar links on mobile */
+    .lab-nav-links {
+        display: none;
+    }
+
+    /* Reveal hamburger menu trigger */
+    .lab-hamburger {
+        display: block;
+    }
+
+    .lab-main-content {
+        padding: 25px 4% 50px;
+    }
+}
