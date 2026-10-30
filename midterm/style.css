@@ -614,3 +614,110 @@ a {
     display: none !important;
 }
 
+/* =========================================
+   MIDTERM TASK 2: PRODUCT CSS GRID LAYOUT
+========================================= */
+
+/* Mobile-first layout: image, details, description */
+
+.product-layout {
+    display: grid;
+
+    grid-template-areas:
+        "image"
+        "details"
+        "description";
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* Product image */
+
+.detail-image {
+    grid-area: image;
+    width: 100%;
+}
+
+.detail-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Product details */
+
+.product-detail-info {
+    grid-area: details;
+    width: 100%;
+    align-self: start;
+}
+
+/* Full-width description */
+
+.product-description {
+    grid-area: description;
+    width: 100%;
+    line-height: 1.8;
+    padding: 25px 0;
+}
+
+.product-description h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.product-description p {
+    margin-bottom: 15px;
+}
+
+/* Desktop and tablet layout: 660px and above */
+
+@media (min-width: 660px) {
+
+    .product-layout {
+        grid-template-areas:
+            "image details"
+            "description description";
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+        align-items: start;
+    }
+
+    /* Sticky product details */
+
+    .product-detail-info {
+        position: sticky;
+        top: 70px;
+    }
+
+    .product-description {
+        margin-top: 10px;
+    }
+}
+
+/* Mobile layout: below 660px */
+
+@media (max-width: 659px) {
+
+    .product-layout {
+        grid-template-areas:
+            "image"
+            "details"
+            "description";
+
+        grid-template-columns: 1fr;
+    }
+
+    .product-detail-info {
+        position: static;
+    }
+}

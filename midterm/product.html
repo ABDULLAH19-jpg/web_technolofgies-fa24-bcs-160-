@@ -48,55 +48,94 @@
 
 <main>
     <div class="container product-detail-container">
-        <div class="row g-4 align-items-center">
-            
-            <!-- Product Image Column -->
-            <div class="col-lg-6">
-                <div class="detail-image">
-                    <img src="images/product-1.jpg" alt="Floral Printed Suit">
+
+        <!-- CSS Grid Layout -->
+        <div class="product-layout">
+
+            <!-- Product Image -->
+            <div class="detail-image">
+                <img src="images/product-1.jpg" alt="Floral Printed Suit">
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-detail-info">
+                <p class="product-category">UNSTITCHED / FLORAL MUSE</p>
+
+                <h1>Floral Printed Suit</h1>
+
+                <p class="detail-price">Rs. 8,990</p>
+
+                <div class="detail-divider"></div>
+
+                <h5>PRODUCT DETAILS</h5>
+
+                <!-- Size Selector -->
+                <div class="mb-3">
+                    <label for="sizeSelect" class="form-label">SELECT SIZE</label>
+
+                    <select id="sizeSelect" class="form-select size-selector">
+                        <option selected>Choose size</option>
+                        <option value="small">Small (S)</option>
+                        <option value="medium">Medium (M)</option>
+                        <option value="large">Large (L)</option>
+                    </select>
+                </div>
+
+                <!-- Quantity Input -->
+                <div class="mb-3">
+                    <label for="quantityInput" class="form-label">QUANTITY</label>
+
+                    <input
+                        type="number"
+                        id="quantityInput"
+                        class="form-control quantity-input"
+                        value="1"
+                        min="1"
+                    >
+                </div>
+
+                <!-- Add to Cart -->
+                <button class="detail-cart-btn">ADD TO CART</button>
+
+                <!-- Extra Information -->
+                <div class="product-extra-info">
+                    <p><i class="fa-solid fa-truck"></i> Free standard shipping on orders over Rs. 5,000</p>
+
+                    <p><i class="fa-solid fa-rotate-left"></i> Easy 7-day return and exchange policy</p>
                 </div>
             </div>
 
-            <!-- Product Info Column -->
-            <div class="col-lg-6">
-                <div class="product-detail-info">
-                    <p class="product-category">UNSTITCHED / FLORAL MUSE</p>
-                    <h1>Floral Printed Suit</h1>
-                    <p class="detail-price">Rs. 8,990</p>
-                    <div class="detail-divider"></div>
-                    
-                    <h5>DESCRIPTION</h5>
-                    <p class="description">
-                        Embrace classic elegance with our signature floral printed suit from the Floral Muse collection. Crafted from premium breathable fabric with intricate design details, perfect for any casual or festive daytime occasion.
-                    </p>
+            <!-- Full Width Description -->
+            <section class="product-description">
+                <h2>PRODUCT DESCRIPTION</h2>
 
-                    <!-- Size Selector Form -->
-                    <div class="mb-3">
-                        <label for="sizeSelect" class="form-label">SELECT SIZE</label>
-                        <select id="sizeSelect" class="form-select size-selector">
-                            <option selected>Choose size</option>
-                            <option value="small">Small (S)</option>
-                            <option value="medium">Medium (M)</option>
-                            <option value="large">Large (L)</option>
-                        </select>
-                    </div>
+                <p>
+                    Embrace classic elegance with our signature Floral Printed Suit
+                    from the Floral Muse collection. This beautiful outfit combines
+                    timeless floral patterns with a contemporary design, creating
+                    a sophisticated look for modern fashion lovers.
+                </p>
 
-                    <!-- Quantity Input -->
-                    <div class="mb-3">
-                        <label for="quantityInput" class="form-label">QUANTITY</label>
-                        <input type="number" id="quantityInput" class="form-control quantity-input" value="1" min="1">
-                    </div>
+                <p>
+                    Crafted from premium breathable fabric, this outfit offers
+                    comfort and style throughout the day. The carefully selected
+                    fabric feels soft against the skin, while the detailed floral
+                    print adds character and elegance to the overall appearance.
+                </p>
 
-                    <!-- Add to Cart Button -->
-                    <button class="detail-cart-btn">ADD TO CART</button>
+                <p>
+                    Its versatile design makes it suitable for casual gatherings,
+                    daytime events, family occasions and festive celebrations.
+                    Pair it with your favourite accessories and footwear to create
+                    a look that reflects your personal style.
+                </p>
 
-                    <!-- Extra Info -->
-                    <div class="product-extra-info">
-                        <p><i class="fa-solid fa-truck"></i> Free standard shipping on orders over Rs. 5,000</p>
-                        <p><i class="fa-solid fa-rotate-left"></i> Easy 7-day return and exchange policy</p>
-                    </div>
-                </div>
-            </div>
+                <p>
+                    We recommend following the garment care instructions to
+                    maintain the fabric quality and preserve the print. Store
+                    the outfit in a clean, dry place to keep it looking fresh.
+                </p>
+            </section>
 
         </div>
     </div>
@@ -123,6 +162,7 @@
                 <h5>CONTACT</h5>
                 <p>Email: support@example.com</p>
                 <p>Pakistan</p>
+
                 <div class="social-icons">
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-facebook"></i>
