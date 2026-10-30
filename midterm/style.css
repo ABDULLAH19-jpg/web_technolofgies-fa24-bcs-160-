@@ -721,3 +721,89 @@ a {
         position: static;
     }
 }
+/* ======================================
+   MIDTERM TASK 3: SEARCH AND SORT
+====================================== */
+
+.product-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0 30px;
+}
+
+#product-search {
+    width: 280px;
+    max-width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+#product-search:focus {
+    border-color: hsl(60, 70%, 45%);
+}
+
+#sort-price {
+    padding: 12px 18px;
+    border: 1px solid #222;
+    background: #222;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#sort-price:hover {
+    background: hsl(60, 70%, 45%);
+    color: #222;
+    border-color: hsl(60, 70%, 45%);
+}
+
+/* Premium product label */
+
+.premium-label {
+    display: inline-block;
+    background: hsl(60, 70%, 45%);
+    color: #222;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* No results message */
+
+#no-products {
+    text-align: center;
+    padding: 40px 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Ensure hidden cards and grid stay hidden */
+
+#product-grid[hidden],
+#product-grid .col[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 576px) {
+
+    .product-controls {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 12px;
+    }
+
+    #product-search,
+    #sort-price {
+        width: 100%;
+    }
+
+}
